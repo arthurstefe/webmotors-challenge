@@ -1,0 +1,475 @@
+* {
+  font-family: Poppins,sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:focus, input:focus, select:focus {
+	outline-offset: 0;
+	outline: none;
+}
+
+.header {
+	z-index: 99;
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	top: 0;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.07);
+}
+
+.logo {
+  width: 150px;
+  pointer-events: none;
+}
+
+.home {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f5f8;
+}
+
+.body {
+  margin-top: 70px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 933px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.loading-overlay {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-body {
+  background-color: white;
+  box-shadow: rgba(158, 184, 209, 0.41) 0px 2px 9px 0px;
+  padding: 25px 25px;
+  float: left;
+  width: calc(100% - 50px);
+  border-radius: 4px;
+}
+
+.filter-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.vehicle-button {
+  display: flex;
+  align-items: flex-end;
+  width: 170px;
+  border-bottom: solid 2px #ccc;
+}
+
+.vehicle-button:hover {
+	cursor: pointer;
+}
+
+.vehicle-button.active {
+  border-bottom: solid 2px #f3123c;
+}
+
+.vehicle-button.active h2 {
+  color: #f3123c;
+}
+
+.vehicle-button div {
+  padding: 8px;
+}
+
+.vehicle-button img {
+  width: 50px;
+}
+
+.vehicle-button span {
+  font-size: 10px;
+  color: #ccc;
+}
+
+.vehicle-button h2 {
+  font-size: 20px;
+  color: #ccc;
+  margin: 0;
+}
+
+.checkbox-input {
+	background-color: transparent;
+}
+
+.checkbox-input:last-child {
+	margin-left: 30px;
+}
+
+.checkbox-container {
+	position: relative;
+    padding-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333;
+	user-select: none;
+	bottom: 1px;
+}
+
+.checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 15px;
+	width: 15px;
+	background-color: #fff;
+	border: solid 1px #ccc;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+	background-color: #fff;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+	background-color: #fff;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.checkbox-container .checkmark:after {
+	left: 5px;
+  top: 2px;
+  width: 3px;
+  height: 6px;
+  border: solid #f3123c;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.text-input {
+  padding: 11px 5px;
+  width: calc(100% - 12px) !important;
+}
+
+.select-input {
+  padding: 10px 5px;
+}
+
+.select-input, .text-input {
+  background-color: white;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.select-input:focus, .text-input:focus {
+	border: solid 1px rgb(68, 68, 68);
+}
+
+.input-container-12 {
+  width: calc(100% - 10px);
+  margin: 5px;
+  float: left;
+}
+
+.input-container-10 {
+  width: calc(100% - 10px);
+  margin: 5px;
+  float: left;
+}
+
+.input-container-8 {
+  width: calc(100% - 10px);
+  margin: 5px;
+  float: left;
+}
+
+.input-container-6 {
+  width: calc(100% - 10px);
+  margin: 5px;
+  float: left;
+}
+
+.input-container-4 {
+  width: calc(100% - 10px);
+  margin: 5px;
+  float: left;
+}
+
+.input-container-3 {
+  width: calc(100% - 10px);
+  margin: 5px;
+  float: left;
+}
+
+.input-container-2 {
+  width: calc(100% - 10px);
+  margin: 5px;
+  float: left;
+}
+
+.filter-actions {
+	display: flex;
+	justify-content: flex-end;
+	float: left;
+	width: calc(100% - 10px);
+	margin: 15px 5px;
+}
+
+.secondary-button {
+	background-color: transparent;
+	border: none;
+	color: #ccc;
+	margin: 0 15px;
+}
+
+.primary-button {
+	background-color: #f3123c;
+	border: none;
+	border-radius: 3px;
+	width: 250px;
+	padding: 15px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.vehicles-list {
+	width: calc(100% + 20px);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  align-content: stretch;
+  flex-wrap: wrap;
+  position: relative;
+  left: -10px;
+  padding-top: 8px;
+}
+
+
+.vehicle-card {
+	width: 300px;
+    height: 320px;
+    background-color: #fff;
+    box-shadow: rgba(158, 184, 209, 0.41) 0px 2px 9px 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    margin: 8px;
+}
+
+.vehicle-card .vehicle-image {
+	width: 100%;
+}
+
+.vehicle-image {
+	height: 186px;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.vehicle-card .vehicle-image img {
+	width: 100%;
+	height: 100%;
+	border-radius: 4px 4px 0 0;
+}
+
+.vehicle-card .vehicle-info {
+	display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.brand-model-version {
+    box-sizing: border-box;
+    flex-grow: 1;
+    padding: 8px 47px 12px 12px;
+}
+
+.brand-model-version h2, .brand-model-version h3 {
+    font-size: 14px;
+    font-weight: 500;
+	margin: 0px;
+	padding-right: 10px;
+	text-transform: uppercase;
+}
+
+.brand-model-version h2 {
+	font-weight: bold;
+}
+
+.brand-model-version h2 {
+	color: rgb(46, 46, 55);
+}
+
+.brand-model-version h3 {
+	color: rgb(139, 140, 153);
+}
+
+
+.price {
+    display: block;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 5px;
+	padding: 0px 12px;
+	color: #686976;
+	font-weight: bold;
+}
+
+.year-km {
+    align-content: space-between;
+    display: flex;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 23px;
+}
+
+.year-km div {
+    -webkit-box-flex: 1;
+    flex: 1 1 0%;
+}
+
+.year-km div:last-child {
+    text-align: right;
+}
+
+.year-km div span {
+    color: rgb(139, 140, 153);
+    font-size: 12px;
+}
+
+.price-year {
+	padding-bottom: 10px;
+}
+
+.image-containter {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.image-wrap {
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+    transition: transform .5s;
+    white-space: nowrap;
+    display: flex;
+}
+
+@media (min-width: 890px) {
+  .text-input {
+    width: 100% !important;
+  }
+
+  .filter-body {
+    padding: 25px 50px;
+    width: calc(100% - 100px);
+  }
+
+  select.autocomplete {
+    border-radius: 0 3px 3px 0;
+  }
+  
+  input.autocomplete {
+    border-radius: 3px 0 0 3px;
+  }
+
+  .input-container-12 {
+    width: calc(100% - 10px);
+    margin: 5px;
+    float: left;
+  }
+  
+  .input-container-10 {
+    width: calc(75% - 10px);
+    margin: 5px;
+    float: left;
+  }
+  
+  .input-container-8 {
+    width: calc(62.5% - 10px);
+    margin: 5px;
+    float: left;
+  }
+  
+  .input-container-6 {
+    width: calc(50% - 10px);
+    margin: 5px;
+    float: left;
+  }
+  
+  .input-container-4 {
+    width: calc(37.5% - 10px);
+    margin: 5px;
+    float: left;
+  }
+  
+  .input-container-3 {
+    width: calc(25% - 10px);
+    margin: 5px;
+    float: left;
+  }
+  
+  .input-container-2 {
+    width: calc(12.5% - 10px);
+    margin: 5px;
+    float: left;
+  } 
+}
+
+@media (min-width: 943px) {
+  .vehicles-list {
+    justify-content: flex-start;
+  }
+}
